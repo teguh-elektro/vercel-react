@@ -1,7 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    fetch('https://vercel-express-one-xi.vercel.app/products')
+    .then(res => res.json())
+    .then(res => console.log(res))
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
